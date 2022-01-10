@@ -16,7 +16,7 @@
             </div>
 
             <div class="navigation-wrapper collapse" id="user-nav">
-               
+
             </div>
         </div>
         <!-- /user menu -->
@@ -30,65 +30,64 @@
 
                     <!-- Main -->
                     {{-- @if (Session::get('role_id')==App\User::ROLE_SUPERADMIN) --}}
-                        {{-- expr --}}
-                    
+                    {{-- expr --}}
+
                     <li class="navigation-header"><span>{{trans('base.manage')}} {{trans('base.system')}}</span> <i class="icon-menu" title="" data-original-title="Main pages"></i></li>
 
                     <li class="treeview"><a href="{{route('admin.index')}}" class="legitRipple"><i class="icon-home4"></i> <span>Hệ thống</span></a>
-                                     			
-                    	<ul class="hidden-ul treeview-menu "> 
+
+                        <ul class="hidden-ul treeview-menu ">
                             <li><a href="{{route('admin.manage')}}" class="legitRipple"><i class="icon-user"></i> <span>Quản lý tài khoản hệ thống</span></a></li>
-                             <li><a href="{{ route('admin.config.index') }}" class="legitRipple"><i class="icon-gear"></i> <span>Cấu hình hệ thống</span></a></li>
-                             <li><a href="" class="legitRipple"><i class="icon-database"></i> <span>Sao lưu - phục hồi dữ liệu</span></a></li>
+                            <li><a href="{{ route('admin.config.index') }}" class="legitRipple"><i class="icon-gear"></i> <span>Cấu hình hệ thống</span></a></li>
+                            <!-- <li><a href="" class="legitRipple"><i class="icon-database"></i> <span>Sao lưu - phục hồi dữ liệu</span></a></li> -->
                         </ul>
-                    		
+
 
                     </li>
 
                     <li class=""><a href="" class="legitRipple"><i class="icon-clipboard6"></i> <span>Đơn hàng</span></a>
-                            
-                        <ul class="">    
+
+                        <ul class="">
                             <li><a href="{{ route('admin.bill.index') }}" class="legitRipple"><i class=" icon-clipboard"></i> <span>Danh sách đơn hàng</span></a></li>
-                            
+
                             <li><a href="{{ route('admin.staff.index') }}" class="legitRipple"><i class="icon-collaboration"></i> <span>Nhân viên</span></a></li>
                             <li><a href="" class="legitRipple"><i class="icon-clippy"></i> <span>Trả hàng</span></a></li>
-                            
+
                         </ul>
 
                     </li>
                     <li><a href="{{ route('admin.customer.index') }}" class="legitRipple"><i class="icon-user"></i> <span>Khách hàng</span></a></li>
-                   
-                    <li><a href="" class="legitRipple"><i class="icon-bag"></i> <span>Sản phẩm</span></a>
-                	  
-                	  <ul class="hidden-ul">    
-                                    
-	                    <li ><a href="{{ route('admin.products.index') }}" class="legitRipple"><i class="icon-basket"></i> <span>Danh sách sản phẩm</span></a></li>
-	                    <li><a href="{{ route('admin.typeproduct.index') }}" class="legitRipple"><i class="icon-stack2"></i> <span>Loại sản phẩm</span></a></li>
 
-	                    <li><a href="{{ route('admin.manufacturer.index') }}" class="legitRipple"><i class=" icon-price-tags"></i> <span>Hãng sản phẩm</span></a></li>
-                        <li><a href="{{ route('admin.supplier.index') }}" class="legitRipple"><i class="icon-office"></i> <span>Nhà cung cấp</span></a></li>
-                        <li><a href="{{ route('admin.store.index') }}" class="legitRipple"><i class="icon-store"></i> <span>Kho</span></a></li>
-                        
-	                   
-	                </ul>
-				    </li>
+                    <li><a href="" class="legitRipple"><i class="icon-bag"></i> <span>Sản phẩm</span></a>
+
+                        <ul class="hidden-ul">
+
+                            <li><a href="{{ route('admin.products.index') }}" class="legitRipple"><i class="icon-basket"></i> <span>Danh sách sản phẩm</span></a></li>
+                            <li><a href="{{ route('admin.typeproduct.index') }}" class="legitRipple"><i class="icon-stack2"></i> <span>Loại sản phẩm</span></a></li>
+
+                            <li><a href="{{ route('admin.manufacturer.index') }}" class="legitRipple"><i class=" icon-price-tags"></i> <span>Hãng sản phẩm</span></a></li>
+                            <li><a href="{{ route('admin.supplier.index') }}" class="legitRipple"><i class="icon-office"></i> <span>Nhà cung cấp</span></a></li>
+                            <li><a href="{{ route('admin.store.index') }}" class="legitRipple"><i class="icon-store"></i> <span>Kho</span></a></li>
+
+
+                        </ul>
+                    </li>
                     <li><a href="{{ route('admin.discountcode.index') }}" class="legitRipple"><i class=" icon-percent"></i> <span>Quản lý mã giảm giá</span></a></li>
-              
-                    
-					 
-					 <li><a href="" class="legitRipple"><i class="icon-graph"></i> <span>Báo cáo</span></a>
-                        <ul class="hidden-ul">  
+
+
+
+                    <li><a href="" class="legitRipple"><i class="icon-graph"></i> <span>Báo cáo</span></a>
+                        <ul class="hidden-ul">
                             <li><a href="{{ route('admin.report.sales') }}" class="legitRipple"><i class="icon-bag"></i> <span>Báo cáo bán hàng</span></a></li>
                             <li><a href="{{ route('admin.report.store') }}" class="legitRipple"><i class="icon-store"></i> <span>Báo cáo kho</span></a></li>
-                            
+
                         </ul>
-                     </li>
-                     <li class=""><a href="" class="legitRipple"><i class="icon-android"></i> <span>CHATBOT</span></a></li>
-                     {{-- @elseif(Session::get('role_id')==App\User::ROLE_STAFF_SALE) --}}
-                    
+                    </li>
+                    {{-- @elseif(Session::get('role_id')==App\User::ROLE_STAFF_SALE) --}}
+
                     {{-- @elseif(Session::get('role_id')==App\User::ROLE_STAFF_STORE) --}}
-                   
-                     {{-- @endif --}}
+
+                    {{-- @endif --}}
 
 
                     <!-- /main -->
@@ -97,13 +96,13 @@
             </div>
         </div>
         <!-- /main navigation -->
-            <div>
-                <ul class="navigation">
-                 
+        <div>
+            <ul class="navigation">
+
                 <li><a href="{{route('logout')}}" class="legitRipple"><i class="icon-switch2"></i> <span>Logout</span></a></li>
 
             </ul>
-            </div>
-            
-</div>
+        </div>
+
+    </div>
 </div>

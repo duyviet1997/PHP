@@ -2,14 +2,16 @@
 
 use Illuminate\Database\Seeder;
 
-class UserTableSeeder extends Seeder {
+class UserTableSeeder extends Seeder
+{
 
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run() {
+    public function run()
+    {
         DB::table('user')->insert([
             'username' => 'admin',
             'name' => 'Administrator',
@@ -40,21 +42,21 @@ class UserTableSeeder extends Seeder {
             'username' => 'customer1',
             'name' => 'customer1',
             'password' => bcrypt('123456'),
-            'address'=>'Hải Phòng, Đồ Sơn , Bàng La',
+            'address' => 'Khánh Hòa, Nha Trang',
             'role_id' => '5'
         ]);
         DB::table('user')->insert([
             'username' => 'customer2',
             'name' => 'customer2',
             'password' => bcrypt('123456'),
-            'address'=>'Hải Phòng, Chợ hàng ,Miếu 2 Xã',
+            'address' => 'Khánh Hòa, Cam Ranh',
             'role_id' => '5'
         ]);
         DB::table('user')->insert([
             'username' => 'customer3',
             'name' => 'customer3',
             'password' => bcrypt('123456'),
-            'address'=>'Hải Phòng,An Lão, Thái Sơn',
+            'address' => 'Khánh Hòa, Nha Trang, Vĩnh Hải',
             'role_id' => '5'
         ]);
         DB::table('user')->insert([
@@ -63,10 +65,5 @@ class UserTableSeeder extends Seeder {
             'password' => bcrypt('123456'),
             'role_id' => '5'
         ]);
-
-
-        
-        
     }
-
 }
