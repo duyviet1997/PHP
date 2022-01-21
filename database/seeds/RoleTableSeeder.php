@@ -34,7 +34,7 @@ class RoleTableSeeder extends Seeder {
             'id' => '5',
             'name' => 'Khách hàng',
             'route' => 'home,cartPage,productDetail,checkout,addToCart,cart,delProductInCart,updateCart,categoryProduct'
-        ]);
+        ]); 
         
     }
 
